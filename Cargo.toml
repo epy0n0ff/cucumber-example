@@ -1,16 +1,16 @@
 [package]
-name = "bdd"
+name = "cucumber-example"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+anyhow = "1"
 async-trait = "0.1"
 cucumber = { version = "0.13", features = ["macros","timestamps","output-json","output-junit"] }
+thiserror = "1"
 tokio = { version = "1.20.0", features = ["full"] }
 
 [[test]]
-name = "example" # this should be the same as the filename of your test target
-harness = false  # allows Cucumber to print output instead of libtest
+name = "example" 
+harness = false
 
